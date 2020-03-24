@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block, everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 ### ZSH ###
 
 # [oh-my-zsh]
@@ -12,24 +5,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # [Theme]
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-# [Powerlevel10K]
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-
-# [Config]
-#POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-#POWERLEVEL9K_SHORTEN_DELIMITER=""
-#POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
-
-# [Random Themes List]
-# Set list of themes to load
-# Setting this variable when ZSH_THEME=random
-# cause zsh load theme from this variable instead of
-# looking in ~/.oh-my-zsh/themes/
-# An empty array have no effect
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+ZSH_THEME="clean"
 
 # [Default User]
 DEFAULT_USER="jieyouxu"
@@ -92,18 +68,12 @@ plugins=(
   colored-man-pages
   git
   git-extras
-  gradle
-  httpie
-  npm
   osx
-  python
   urltools
   zsh-autosuggestions
-  autojump
   brew
   common-aliases
   git-flow
-  catimg
   last-working-dir
   urltools
   wd
@@ -127,13 +97,6 @@ alias del="rmtrash"
 # [Man Path]
 export MANPATH="/usr/local/man:$MANPATH"
 
-### LaTeX ###
-
-# [LaTeX Distribution]
-export MATHPATH="$MANPATH:/usr/local/texlive/2019/texmf-dist/doc/man"
-export INFOPATH="$INFOPATH:/usr/local/texlive/2019/texmf-dist/doc/info"
-export PATH="$PATH:/usr/local/texlive/2019/bin/x86_64-darwin"
-
 ### Language ###
 
 # [Default Language Encoding]
@@ -142,7 +105,7 @@ export LANG="en_US.UTF-8"
 ### Default Editor ###
 
 # [Default Editor]
-export EDITOR='code'
+export EDITOR='nvim'
 
 ### Compilation ###
 
@@ -173,11 +136,6 @@ pyclean () {
 ### Generic Binaries ###
 export PATH="/usr/local/bin:$PATH"
 
-### Nano ###
-
-# [Nano Distribution]
-export PATH="$PATH:/usr/local/opt/ncurses/bin"
-
 ### Homebrew ###
 
 # [Homebrew Distribution]
@@ -186,10 +144,10 @@ export PATH="$PATH:/usr/local/sbin"
 ### Haskell / Stack, Cabal ###
 
 # [Stack, Cabal]
-export PATH="$PATH:$HOME/.local/bin"
+#export PATH="$PATH:$HOME/.local/bin"
 
 # [Cabal]
-export PATH="$PATH:$HOME/.cabal/bin"
+#export PATH="$PATH:$HOME/.cabal/bin"
 
 ### Sublime ###
 
@@ -199,15 +157,15 @@ export PATH="$PATH:$HOME/bin/"
 ### Java ###
 
 # [Java Home]
-export JAVA_8_HOME="$(/usr/libexec/java_home -v 1.8)"
-export JAVA_10_HOME="$(/usr/libexec/java_home -v 10)"
-export JAVA_11_HOME="$(/usr/libexec/java_home -v 11)"
+#export JAVA_8_HOME="$(/usr/libexec/java_home -v 1.8)"
+#export JAVA_10_HOME="$(/usr/libexec/java_home -v 10)"
+#export JAVA_11_HOME="$(/usr/libexec/java_home -v 11)"
 export JAVA_13_HOME="$(/usr/libexec/java_home -v 13)"
 
 # [Java Version Aliases]
-alias java8="export JAVA_HOME=$JAVA_8_HOME"
-alias java10="export JAVA_HOME=$JAVA_10_HOME"
-alias java11="export JAVA_HOME=$JAVA_11_HOME"
+#alias java8="export JAVA_HOME=$JAVA_8_HOME"
+#alias java10="export JAVA_HOME=$JAVA_10_HOME"
+#alias java11="export JAVA_HOME=$JAVA_11_HOME"
 alias java13="export JAVA_HOME=$JAVA_13_HOME"
 
 # [Default Java Version]
@@ -217,14 +175,6 @@ java13
 
 # [Swift Distribution]
 export PATH="$PATH:/usr/bin"
-
-### Flutter, Dart ###
-
-# [Flutter Distribution]
-export PATH="$PATH:$HOME/Documents/flutter/bin"
-
-# [AngularDart]
-export PATH="$PATH:$HOME/.pub-cache/bin"
 
 ### LLVM ###
 
@@ -241,12 +191,12 @@ export PATH="$PATH:/usr/local/mysql-shell/bin"
 
 # [Ruby Environment]
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
 
 ### OCaml ###
 
 # [Opam Configuration]
-test -r /Users/jieyouxu/.opam/opam-init/init.zsh && . /Users/jieyouxu/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+#test -r /Users/jieyouxu/.opam/opam-init/init.zsh && . /Users/jieyouxu/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 ### QEMU ###
 
@@ -255,8 +205,8 @@ alias qemu="qemu-system-x86_64"
 
 ### PostgreSQL ###
 
-# [PostgreSQL 11]
-export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
+# [PostgreSQL]
+export PATH="/usr/local/opt/postgresql/bin:$PATH"
 
 ### Directory Aliases ###
 
@@ -265,31 +215,5 @@ alias cdrepos="cd ~/Documents/Repos"
 
 # [University Documents Alias]
 alias cducl="cd ~/Documents/University"
-
-# [BSc Computer Science Aliases]
-BSC_Y1_DIR="~/Documents/University/BSc-Year-1"
-BSC_Y2_DIR="~/Documents/University/BSc-Year-2"
-BSC_Y3_DIR="~/Documents/University/BSc-Year-3"
-
-# [BSc Computer Science Year 1 Aliases]
-alias cdCOMP0002-C="cd $BSC_Y1_DIR/COMP0002/C"
-alias cdCOMP0002-H="cd $BSC_Y1_DIR/COMP0002/Haskell"
-alias cdCOMP0003-L="cd $BSC_Y1_DIR/COMP0003/Logic"
-alias cdCOMP0003-A="cd $BSC_Y1_DIR/COMP0003/Automata"
-alias cdCOMP0004="cd $BSC_Y1_DIR/COMP0004"
-alias cdCOMP0005="cd $BSC_Y1_DIR/COMP0005"
-alias cdCOMP0012="cd $BSC_Y1_DIR/COMP0012"
-alias cdCOMP0147="cd $BSC_Y1_DIR/COMP0147"
-alias cdENGF0001-C1="cd $BSC_Y1_DIR/ENGF0001/Challenge-1"
-alias cdENGF0001-C2="cd $BSC_Y1_DIR/ENGF0001/Challenge-2"
-alias cdENGF0002="cd $BSC_Y1_DIR/ENGF0002"
-
-# [BSc Computer Science Year 2 Aliases]
-alias cdCOMP0008="cd $BSC_Y2_DIR/COMP0008"
-alias cdCOMP0009="cd $BSC_Y2_DIR/COMP0009"
-alias cdCOMP0010="cd $BSC_Y2_DIR/COMP0010"
-alias cdCOMP0011="cd $BSC_Y2_DIR/COMP0011"
-alias cdCOMP0016="cd $BSC_Y2_DIR/COMP0016"
-alias cdCOMP0141="cd $BSC_Y2_DIR/COMP0141"
 
 clear

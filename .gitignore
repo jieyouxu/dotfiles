@@ -4,6 +4,7 @@
 # `git` configuration
 !.gitignore
 !.gitignore_global
+!.gitconfig
 
 # `httpie` config
 !.httpie/
