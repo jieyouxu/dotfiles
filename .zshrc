@@ -112,12 +112,34 @@ export EDITOR='nvim'
 
 ### Aliases ###
 
-# [ZSH Aliases]
+# use `rmtrash` to move files into recycle bin
+alias trash="rmtrash"
+alias del="rmtrash"
+
+# `zsh` aliases
 alias zshconfig="open ~/.zshrc"
 alias ohmyzsh="open ~/.oh-my-zsh"
 
-# [Ack Aliases]
+# `ack` highlight alias
 alias hlt="ack --passthru"
+
+# `rmtrash` aliases
+alias rm="rmtrash"
+alias del="rmtrash"
+
+# `sed` alternative with rust `sd`
+alias sed="sd"
+
+# hex viewer with rust `hexyl`
+alias vhex="hexyl"
+
+# queue tasks (serial/parallel) with rust `pueue`
+alias queued="pueued -d" # run `pueue` daemon as background process
+alias queue="pueue"
+alias tasks"pueue"
+
+# `time` alternative with rust `hyperfine`
+alias time="hyperfine"
 
 ### Python ###
 
