@@ -75,8 +75,6 @@ plugins=(
   git-flow
   last-working-dir
   urltools
-  wd
-  z
 )
 
 # [ZSH Syntax Highlighting]
@@ -140,6 +138,19 @@ alias tasks"pueue"
 
 # `time` alternative with rust `hyperfine`
 alias time="hyperfine"
+
+# `ls` alternative with rust `exa`
+alias ls="exa"
+
+# `ls -al` alternative with rust `exa`
+alias l="exa --all --long"
+alias dir="exa --all --long"
+
+# `tree` alternative with rust `exa`
+alias tree="exa --tree"
+
+# Network monitor with rust `bandwhich`
+alias network="bandwhich"
 
 ### Python ###
 
@@ -234,5 +245,9 @@ alias cducl="cd ~/Documents/University"
 ### `fzf` ###
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+### Rust `zoxide` (`z` alternative) ###
+
+eval "$(zoxide init zsh)"
 
 clear
