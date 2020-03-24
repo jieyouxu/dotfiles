@@ -172,6 +172,9 @@ alias network="bandwhich"
 # `cat` alternative with rust `bat`
 alias cat="bat"
 
+# `diff` alternative with rust `diffr`
+alias diff="diffr"
+
 ### Python ###
 
 # [Python Clear pycache]
