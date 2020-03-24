@@ -11,6 +11,7 @@
 !.gitignore
 !.gitignore_global
 !.gitconfig
+!.gitmodules
 
 # `httpie` config
 !.httpie/
@@ -39,7 +40,9 @@
 !.bashrc
 
 # `oh_my_zsh`
+!.oh-my-zsh
 !.oh-my-zsh/
+!.oh-my-zsh/*
 
 # `alacritty` config
 !.config/alacritty/
