@@ -4,7 +4,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # [Theme]
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="clean"
 
 # [Default User]
@@ -85,12 +84,6 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # [oh-my-zsh]
 source $ZSH/oh-my-zsh.sh
-
-### Deletion ###
-
-# [Use rmtrash Instead of rm]
-alias trash="rmtrash"
-alias del="rmtrash"
 
 ### Man Pages ###
 
