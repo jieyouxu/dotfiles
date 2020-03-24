@@ -1,0 +1,38 @@
+# Ignore all files
+**/*
+
+# `git` configuration
+!.gitignore
+!.gitignore_global
+
+# `httpie` config
+!.httpie/
+
+# `hyper` config
+!.hyper.js
+
+# `nano` config
+!.nanorc
+
+# tools (e.g. `cpputest`)
+!tools/
+
+# `yarn` config
+!.yarnrc
+
+# `zsh` config
+!.zshrc
+
+# `tldr` config
+!.tldrrc
+
+# `bash` and profile
+!.profile
+!.bash_profile
+!.bashrc
+
+# `oh_my_zsh`
+!./oh-my-zsh/
+
+# `commitizen` config
+!.czrc

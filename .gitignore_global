@@ -1,0 +1,10 @@
+# Temporary Files
+*~
+.DS_Store
+
+# IDEA
+**/.idea/
+**/*.iml
+
+# VSCode
+**/.vscode/
