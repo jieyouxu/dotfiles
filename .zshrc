@@ -199,13 +199,13 @@ export PATH="$PATH:/usr/local/opt/llvm/bin"
 ### MySQL ###
 
 # [MySQL Distribution]
-export PATH="$PATH:/usr/local/mysql/bin"
-export PATH="$PATH:/usr/local/mysql-shell/bin"
+#export PATH="$PATH:/usr/local/mysql/bin"
+#export PATH="$PATH:/usr/local/mysql-shell/bin"
 
 ### Ruby ###
 
 # [Ruby Environment]
-export PATH="$HOME/.rbenv/bin:$PATH"
+#export PATH="$HOME/.rbenv/bin:$PATH"
 #eval "$(rbenv init -)"
 
 ### OCaml ###
