@@ -43,3 +43,8 @@
 # Neovim `nvim` config
 !.config/nvim/
 !.config/nvim/*.vim
+
+# Brew listings and script
+!.list-brew-packages.sh
+!.brewlist
+!.brewcasklist
