@@ -32,6 +32,7 @@ call plug#begin()
 Plug 'ciaranm/securemodelines'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'justinmk/vim-sneak'
+Plug 'terryma/vim-expand-region'
 
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
@@ -381,6 +382,10 @@ noremap <leader>m ct_
 map <F1> <Esc>
 imap <F1> <Esc>
 
+" Expand region
+" Adapted from https://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
 
 " =============================================================================
 " # Autocommands
