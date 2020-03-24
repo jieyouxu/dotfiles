@@ -387,6 +387,9 @@ imap <F1> <Esc>
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
+" Prevent stupid window from showing up
+map q: :q
+
 " =============================================================================
 " # Autocommands
 " =============================================================================
