@@ -231,4 +231,8 @@ alias cdrepos="cd ~/Documents/Repos"
 # [University Documents Alias]
 alias cducl="cd ~/Documents/University"
 
+### `fzf` ###
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 clear

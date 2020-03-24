@@ -33,7 +33,10 @@
 !.bashrc
 
 # `oh_my_zsh`
-!./oh-my-zsh/
+!.oh-my-zsh/
 
-# `commitizen` config
-!.czrc
+# `alacritty` config
+!.config/alacritty/
+
+# neovim `nvim` config
+!.config/nvim/
