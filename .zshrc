@@ -69,7 +69,6 @@ plugins=(
   git-extras
   osx
   urltools
-  zsh-autosuggestions
   brew
   common-aliases
   git-flow
