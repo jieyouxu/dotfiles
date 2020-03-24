@@ -1,5 +1,6 @@
 # Ignore all files
 **/*
+!.config/
 
 # `git` configuration
 !.gitignore
@@ -37,6 +38,8 @@
 
 # `alacritty` config
 !.config/alacritty/
+!.config/alacritty/*
 
-# neovim `nvim` config
+# Neovim `nvim` config
 !.config/nvim/
+!.config/nvim/*.vim
