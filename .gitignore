@@ -1,5 +1,10 @@
 # Ignore all files
 **/*
+
+# Readme
+!README.md
+
+# Except for config directory
 !.config/
 
 # `git` configuration
