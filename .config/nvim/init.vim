@@ -48,6 +48,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
 Plug 'rust-lang/rust.vim'
+Plug 'arzg/vim-rust-syntax-ext'
 Plug 'dag/vim-fish'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -73,6 +74,13 @@ if !has('gui_running')
 endif
 if (match($TERM, "-256color") != -1) && (match($TERM, "screen-256color") == -1)
   " Screen does not (yet) support truecolor
+  set termguicolors
+endif
+
+if exists("$TMUX")
+  set t_Co=256
+  set notermguicolors
+else
   set termguicolors
 endif
 
