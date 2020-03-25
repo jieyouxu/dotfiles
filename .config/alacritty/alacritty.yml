@@ -179,7 +179,7 @@ font:
   use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
-#draw_bold_text_with_bright_colors: true
+draw_bold_text_with_bright_colors: true
 
 # Colors (Tomorrow Night Bright)
 colors:
@@ -197,7 +197,7 @@ colors:
     blue:    '0x7aa6da'
     magenta: '0xc397d8'
     cyan:    '0x70c0ba'
-    white:   '0xFEFEFE'
+    white:   '0xffffff'
 
   # Bright colors
   bright:
@@ -208,7 +208,7 @@ colors:
     blue:    '0x7aa6da'
     magenta: '0xb77ee0'
     cyan:    '0x54ced6'
-    white:   '0x2a2a2a'
+    white:   '0xfefefe'
 
 # Visual Bell
 #
