@@ -182,8 +182,8 @@ alias diff="diffr"
 # `find` alternative with rust `fd`
 alias find="fd"
 
-# `top` alternative with rust `zenith`
-alias top="zenith"
+# `top` alternative with rust `ytop`
+alias top="ytop"
 
 # `ps` alternative with rust `procs`
 alias ps="procs"
