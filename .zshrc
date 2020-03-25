@@ -8,8 +8,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 # [Theme]
-#ZSH_THEME="clean"
-# Use rust `starship` instead
+ZSH_THEME="clean"
 
 # [Default User]
 DEFAULT_USER="jieyouxu"
@@ -188,6 +187,9 @@ alias top="ytop"
 # `ps` alternative with rust `procs`
 alias ps="procs"
 
+# `http`ie alternative with rust `rural`
+alias http="rural"
+
 ### Python ###
 
 # [Python Clear pycache]
@@ -288,7 +290,3 @@ alias cducl="cd ~/Documents/University"
 ### Rust `zoxide` (`z` alternative) ###
 
 eval "$(zoxide init zsh)"
-
-### Rust `starship` prompt ###
-
-eval "$(starship init zsh)"
