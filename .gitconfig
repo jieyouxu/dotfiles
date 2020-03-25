@@ -43,8 +43,8 @@
 [diff]
 	tool = nvim
 [pager]
-	log  = path/to/diffr | less -R
-	show = path/to/diffr | less -R
-	diff = path/to/diffr | less -R
+	log  = diffr | less -R
+	show = diffr | less -R
+	diff = diffr | less -R
 [interactive]
 	diffFilter = path/to/diffr
