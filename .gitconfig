@@ -42,6 +42,4 @@
 [merge]
 	tool = nvim
 [diff]
-	tool = nvim
-[interactive]
-	diffFilter = diffr
+	tool = delta --dark
