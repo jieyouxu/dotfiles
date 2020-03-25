@@ -51,7 +51,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
 Plug 'rust-lang/rust.vim'
-Plug 'arzg/vim-rust-syntax-ext' " additional Rust syntax highlighting
 Plug 'dag/vim-fish'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -106,7 +105,6 @@ let g:secure_modelines_allowed_items = [
 let base16colorspace=256
 
 " Lightline
-" let g:lightline = { 'colorscheme': 'wombat' }
 let g:lightline = {
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
@@ -367,6 +365,9 @@ function! s:show_documentation()
   endif
 endfunction
 
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+
 " <leader><leader> toggles between buffers
 nnoremap <leader><leader> <c-^>
 
@@ -395,10 +396,6 @@ map q: :q
 " # Autocommands
 " =============================================================================
 
-" Prevent accidental writes to buffers that shouldn't be edited
-autocmd BufRead *.orig set readonly
-autocmd BufRead *.pacnew set readonly
-
 " Leave paste mode when leaving insert mode
 autocmd InsertLeave * set nopaste
 
@@ -409,7 +406,6 @@ if has("autocmd")
 endif
 
 " Follow Rust code style rules
-au Filetype rust source ~/.config/nvim/scripts/spacetab.vim
 au Filetype rust set colorcolumn=100
 
 " Help filetype detection

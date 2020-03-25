@@ -18,4 +18,11 @@ export HISTCONTROL=ignoreboth
 export HISTSIZE=5000
 export HISTIGNORE="clear:bg:fg:cd:cd -:cd ..:exit:date:w:* --help:ls:l:ll:lll"
 
+# Use `fzf`
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Use `zoxide`
+eval "$(zoxide init bash)"
+
+# Use `starship` prompt
+eval "$(starship init bash)"

@@ -4,7 +4,8 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # [Theme]
-ZSH_THEME="clean"
+#ZSH_THEME="clean"
+# Use rust `starship` instead
 
 # [Default User]
 DEFAULT_USER="jieyouxu"
@@ -137,9 +138,10 @@ alias ohmyzsh="open ~/.oh-my-zsh"
 # `ack` highlight alias
 alias hlt="ack --passthru"
 
-# `rmtrash` aliases
-alias rm="rmtrash"
-alias del="rmtrash"
+# `rm` alternative with rust `rip`; graveyard defaults to trash
+alias rip="rip --graveyard ~/.local/share/Trash"
+alias rm="rip"
+alias del="rip"
 
 # `sed` alternative with rust `sd`
 alias sed="sd"
@@ -173,6 +175,15 @@ alias cat="bat"
 
 # `diff` alternative with rust `diffr`
 alias diff="diffr"
+
+# `find` alternative with rust `fd`
+alias find="fd"
+
+# `top` alternative with rust `zenith`
+alias top="zenith"
+
+# `ps` alternative with rust `procs`
+alias ps="procs"
 
 ### Python ###
 
@@ -274,5 +285,9 @@ alias cducl="cd ~/Documents/University"
 ### Rust `zoxide` (`z` alternative) ###
 
 eval "$(zoxide init zsh)"
+
+### Rust `starship` prompt ###
+
+eval "$(starship init zsh)"
 
 clear
