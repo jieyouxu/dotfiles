@@ -1,3 +1,5 @@
+export TERM=xterm-256color
+
 ### ZSH ###
 
 # [oh-my-zsh]
@@ -71,7 +73,6 @@ plugins=(
   osx
   urltools
   brew
-  common-aliases
   git-flow
   last-working-dir
   urltools
@@ -289,5 +290,3 @@ eval "$(zoxide init zsh)"
 ### Rust `starship` prompt ###
 
 eval "$(starship init zsh)"
-
-clear
