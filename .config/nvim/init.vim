@@ -51,12 +51,13 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
 Plug 'rust-lang/rust.vim'
+Plug 'arzg/vim-rust-syntax-ext' " additional Rust syntax highlighting
 Plug 'dag/vim-fish'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
 " Colorscheme
-Plug 'chriskempson/base16-vim'
+Plug 'arzg/vim-colors-xcode'
 
 call plug#end()
 
@@ -81,7 +82,7 @@ endif
 
 " Colors
 set background=dark
-colorscheme base16-tomorrow-night-eighties
+colorscheme xcodedarkhc
 hi Normal ctermbg=NONE
 
 " Get syntax
