@@ -38,6 +38,7 @@
 	required = true
 [core]
 	editor = nvim
+	pager = delta --dark
 [merge]
 	tool = nvim
 [diff]
