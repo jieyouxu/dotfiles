@@ -83,7 +83,7 @@ window:
 scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
-  history: 0
+  history: 1000
 
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
@@ -281,7 +281,7 @@ shell:
    args:
      - -l
      - -c
-     - "tmux new-session -A -s main"
+     - "tmux attach || tmux"
 
 # Startup directory
 #
