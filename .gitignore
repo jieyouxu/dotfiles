@@ -56,3 +56,6 @@
 !.list-brew-packages.sh
 !.brewlist
 !.brewcasklist
+
+# `tmux` config
+!.tmux.conf

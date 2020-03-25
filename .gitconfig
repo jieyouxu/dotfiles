@@ -11,6 +11,10 @@
 	lg = log --graph --pretty=format:'[%Cred%h%Creset]%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	st = status
 	sum = log -n 80 --pretty=oneline
+	dc = diff --cached
+	d = diff
+	rb = rebase
+	cm = commit
 [color]
 	branch = auto
 	diff = auto
