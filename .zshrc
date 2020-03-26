@@ -201,8 +201,8 @@ alias top="ytop"
 # `ps` alternative with rust `procs`
 alias ps="procs"
 
-# `http`ie alternative with rust `rural`
-alias http="rural"
+# `http` alternative with golang `wuzz`
+alias http="wuzz"
 
 ### Python ###
 
@@ -278,6 +278,12 @@ export PATH="$PATH:/usr/local/opt/llvm/bin"
 
 # [Opam Configuration]
 #test -r /Users/jieyouxu/.opam/opam-init/init.zsh && . /Users/jieyouxu/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+### Golang ###
+
+# [Go Path]
+export GOROOT=$HOME/go
+export PATH=$PATH:$GOROOT/bin
 
 ### QEMU ###
 
