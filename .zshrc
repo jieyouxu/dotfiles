@@ -201,9 +201,6 @@ alias top="ytop"
 # `ps` alternative with rust `procs`
 alias ps="procs"
 
-# `http` alternative with golang `wuzz`
-alias http="wuzz"
-
 ### Python ###
 
 # [Python Clear pycache]
