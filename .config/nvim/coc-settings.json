@@ -1,0 +1,4 @@
+{
+	"rust-analyzer.enableCargoWatchOnStartup": false,
+	"coc.preferences.formatOnSaveFiletypes": ["rust"]
+}
