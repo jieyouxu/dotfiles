@@ -373,6 +373,9 @@ endfunction
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
 
+" Rename
+nmap <F6> <Plug>(coc-rename)
+
 " <leader><leader> toggles between buffers
 nnoremap <leader><leader> <c-^>
 
