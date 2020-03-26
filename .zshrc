@@ -279,8 +279,8 @@ export PATH="$PATH:/usr/local/opt/llvm/bin"
 ### Golang ###
 
 # [Go Path]
-export GOROOT=$HOME/go
-export PATH=$PATH:$GOROOT/bin
+#export GOROOT=$HOME/go
+#export PATH=$PATH:$GOROOT/bin
 
 ### QEMU ###
 
