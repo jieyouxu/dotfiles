@@ -91,6 +91,7 @@ plugins=(
   git-flow
   last-working-dir
   urltools
+  zsh-autosuggestions
 )
 
 # [ZSH Syntax Highlighting]
