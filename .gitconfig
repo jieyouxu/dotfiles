@@ -48,3 +48,5 @@
 	tool = nvim
 [diff]
 	tool = delta --dark
+[sequence]
+	editor = interactive-rebase-tool

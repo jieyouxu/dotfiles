@@ -200,7 +200,10 @@ alias find="fd"
 alias top="ytop"
 
 # `ps` alternative with rust `procs`
-alias ps="procs"
+alias ps="procs --watch"
+
+# Use 'gdate' (GNU coreutils `date`) instead of macOS `date`
+alias date="gdate"
 
 ### Python ###
 
@@ -308,3 +311,10 @@ alias cducl="cd ~/Documents/University"
 ### Rust `zoxide` (`z` alternative) ###
 
 eval "$(zoxide init zsh)"
+
+### Silver Prompt ###
+#SILVER=(status:black:white dir:blue:black git:green:black cmdtime:magenta:black)
+#export SILVER_DIR_LENGTH=1
+#export SILVER_SHELL=zsh # bash, zsh, or fish
+#
+#eval "$(silver init)"
