@@ -49,12 +49,12 @@ Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
 Plug 'rust-lang/rust.vim'
 Plug 'arzg/vim-rust-syntax-ext'
-Plug 'dag/vim-fish'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
 " Colorscheme
-Plug 'arzg/vim-colors-xcode'
+"Plug 'arzg/vim-colors-xcode'
+Plug 'srcery-colors/srcery-vim'
 
 call plug#end()
 
@@ -86,7 +86,8 @@ endif
 
 " Colors
 set background=dark
-colorscheme xcodedarkhc
+"colorscheme xcodedarkhc
+colorscheme srcery
 hi Normal ctermbg=NONE
 
 " Get syntax
@@ -111,6 +112,7 @@ let base16colorspace=256
 
 " Lightline
 let g:lightline = {
+      \ 'colorscheme': 'srcery',
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
