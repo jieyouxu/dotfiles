@@ -188,7 +188,6 @@ set scrolloff=2
 set cursorline
 set noshowmode
 set hidden
-set nowrap
 set nojoinspaces
 let g:sneak#s_next = 1
 let g:vim_markdown_new_list_item_indent = 0
@@ -220,6 +219,9 @@ set tabstop=4
 set noexpandtab
 
 " Wrapping options
+set textwidth=80 " default to 80 columns for all file types
+set wrapmargin=0
+set wrap
 set formatoptions=tc " wrap text and comments using textwidth
 set formatoptions+=r " continue comments when pressing ENTER in I mode
 set formatoptions+=q " enable formatting of comments with gq
@@ -413,6 +415,7 @@ noremap <Leader>P "+p
 
 " Follow Rust code style rules
 au Filetype rust set colorcolumn=100
+au Filetype rust set textwidth=100
 
 " Help filetype detection
 autocmd BufRead *.md set filetype=markdown

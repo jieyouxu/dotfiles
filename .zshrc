@@ -205,6 +205,9 @@ alias ps="procs --watch"
 # Use 'gdate' (GNU coreutils `date`) instead of macOS `date`
 alias date="gdate"
 
+# `serve` alternative with rust `sfz`
+alias serve="sfz"
+
 ### Python ###
 
 # [Python Clear pycache]
