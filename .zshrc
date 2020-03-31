@@ -143,6 +143,7 @@ export EDITOR='nvim'
 
 # Clear entire buffer
 alias reset="clear && printf '\e[3J'"
+alias cls="reset"
 
 # Use neovim instead of vim
 alias vim="nvim"
