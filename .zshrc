@@ -141,6 +141,9 @@ export EDITOR='nvim'
 
 ### Aliases ###
 
+# Clear entire buffer
+alias reset="clear && printf '\e[3J'"
+
 # Use neovim instead of vim
 alias vim="nvim"
 
@@ -314,10 +317,3 @@ alias cducl="cd ~/Documents/University"
 ### Rust `zoxide` (`z` alternative) ###
 
 eval "$(zoxide init zsh)"
-
-### Silver Prompt ###
-#SILVER=(status:black:white dir:blue:black git:green:black cmdtime:magenta:black)
-#export SILVER_DIR_LENGTH=1
-#export SILVER_SHELL=zsh # bash, zsh, or fish
-#
-#eval "$(silver init)"
