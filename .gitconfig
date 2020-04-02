@@ -15,7 +15,7 @@
 	d = diff
 	rb = rebase
 	cm = commit
-	rs = restore --staged
+	rs = restore --staged .
 [color]
 	branch = auto
 	diff = auto
