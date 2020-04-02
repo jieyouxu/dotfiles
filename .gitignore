@@ -62,3 +62,7 @@
 
 # `coc.nvim` config
 !.config/nvim/coc-settings.json
+
+# `kitty` config
+!.config/kitty/
+!.config/kitty/*.conf
