@@ -404,10 +404,15 @@ vmap <C-v> <Plug>(expand_region_shrink)
 " Prevent stupid window from showing up
 map q: :q
 
+" Yank and paste to system clipboard
 noremap <Leader>y "*y
 noremap <Leader>p "*p
 noremap <Leader>Y "+y
 noremap <Leader>P "+p
+
+" Delete text but send to null buffer to avoid overwriting content in the "0
+" register
+nnoremap <leader>d "_d
 
 " =============================================================================
 " # Autocommands
