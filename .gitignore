@@ -66,3 +66,9 @@
 # `kitty` config
 !.config/kitty/
 !.config/kitty/*.conf
+
+# `$ZSH_CUSTOM` themes
+!.oh-my-zsh/
+!.oh-my-zsh/custom/
+!.oh-my-zsh/custom/themes/
+!.oh-my-zsh/custom/themes/*.zsh-theme

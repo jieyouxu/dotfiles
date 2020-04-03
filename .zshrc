@@ -8,7 +8,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 # [Theme]
-ZSH_THEME="sorin"
+ZSH_THEME="bubblified"
 
 # [Default User]
 DEFAULT_USER="jieyouxu"
@@ -29,9 +29,7 @@ HYPHEN_INSENSITIVE="true"
 # [Auto Update Frequency]
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
-
-# [List Directory Colors]
-# Uncomment the following line to disable colors in ls.
+# [List Directory Colors] # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
 
 # [Auto Terminal Title]
@@ -300,12 +298,12 @@ alias cducl="cd ~/Documents/University"
 ### Base16 ###
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
+#BASE16_SHELL="$HOME/.config/base16-shell/"
+#[ -n "$PS1" ] && \
+#    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+#        eval "$("$BASE16_SHELL/profile_helper.sh")"
 
-base16_gruvbox-dark-hard
+#base16_gruvbox-dark-hard
 
 ### `fzf` ###
 
