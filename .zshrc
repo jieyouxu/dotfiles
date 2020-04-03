@@ -8,7 +8,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 # [Theme]
-ZSH_THEME="bubblified"
+ZSH_THEME="common"
 
 # [Default User]
 DEFAULT_USER="jieyouxu"
@@ -195,6 +195,9 @@ alias date="gdate"
 
 # `serve` alternative with rust `sfz`
 alias serve="sfz"
+
+# TMUX alias (attach session)
+alias t="tmux attach || tmux"
 
 ### Python ###
 
