@@ -58,7 +58,10 @@ Plug 'plasticboy/vim-markdown'
 "Plug 'arzg/vim-colors-xcode'
 "Plug 'srcery-colors/srcery-vim'
 "Plug 'NLKNguyen/papercolor-theme'
-Plug 'chriskempson/base16-vim'
+"Plug 'chriskempson/base16-vim'
+"Plug 'nightsense/cosmic_latte'
+"Plug 'morhetz/gruvbox'
+Plug 'cormacrelf/vim-colors-github'
 
 call plug#end()
 
@@ -88,17 +91,23 @@ else
   set termguicolors
 endif
 
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
 " Base16
-let base16colorspace=256
+"let base16colorspace=256
 
 " Colors
 set background=dark
 "colorscheme xcodedarkhc
 "colorscheme srcery
 "colorscheme PaperColor
-colorscheme base16-gruvbox-dark-hard
-
-hi Normal ctermbg=NONE
+"colorscheme base16-gruvbox-dark-hard
+"colorscheme cosmic_latte
+colorscheme github
 
 " Get syntax
 syntax on
@@ -107,7 +116,7 @@ syntax on
 let g:secure_modelines_allowed_items = [
                 \ "textwidth",   "tw",
                 \ "softtabstop", "sts",
-                \ "tabstop",     "ts",
+				\ "tabstop",     "ts",
                 \ "shiftwidth",  "sw",
                 \ "expandtab",   "et",   "noexpandtab", "noet",
                 \ "filetype",    "ft",
@@ -129,10 +138,11 @@ let g:secure_modelines_allowed_items = [
 "      \ 'subseparator': { 'left': '', 'right': '' }
 "\ }
 
-function! LightlineFilename()
-  return expand('%:t') !=# '' ? @% : '[No Name]'
-endfunction
+"function! LightlineFilename()
+"  return expand('%:t') !=# '' ? @% : '[No Name]'
+"endfunction
 
+" Crystalline
 function! StatusLine(current, width)
   let l:s = ''
 
@@ -168,7 +178,7 @@ endfunction
 let g:crystalline_enable_sep = 1
 let g:crystalline_statusline_fn = 'StatusLine'
 let g:crystalline_tabline_fn = 'TabLine'
-let g:crystalline_theme = 'gruvbox'
+let g:crystalline_theme = 'papercolor'
 
 set showtabline=2
 set guioptions-=e
