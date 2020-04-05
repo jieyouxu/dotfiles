@@ -108,7 +108,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: "Iosevka"
+    family: "SFMono Nerd Font"
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -119,7 +119,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: "Iosevka"
+    family: "SFMono Nerd Font"
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -130,7 +130,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: "Iosevka"
+    family: "SFMono Nerd Font"
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -141,13 +141,13 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: "Iosevka"
+    family: "SFMono Nerd Font"
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
 
   # Point size
-  size: 16.0
+  size: 18.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -182,61 +182,33 @@ font:
 draw_bold_text_with_bright_colors: true
 
 # Colors (Tomorrow Night Bright)
-#colors:
-#  # Default colors
-#  primary:
-#    background: '0x000000'
-#    foreground: '0xeaeaea'
-#
-#  # Normal colors
-#  normal:
-#    black:   '0x000000'
-#    red:     '0xd54e53'
-#    green:   '0xb9ca4a'
-#    yellow:  '0xe6c547'
-#    blue:    '0x7aa6da'
-#    magenta: '0xc397d8'
-#    cyan:    '0x70c0ba'
-#    white:   '0xffffff'
-#
-#  # Bright colors
-#  bright:
-#    black:   '0x666666'
-#    red:     '0xff3334'
-#    green:   '0x9ec400'
-#    yellow:  '0xe7c547'
-#    blue:    '0x7aa6da'
-#    magenta: '0xb77ee0'
-#    cyan:    '0x54ced6'
-#    white:   '0xfefefe'
-
 colors:
   # Default colors
   primary:
-    background: '0x111111'
-    foreground: '0xcccccc'
+    background: '0x000000'
+    foreground: '0xeaeaea'
 
   # Normal colors
   normal:
-    black:   '0x222222'
-    red:     '0xe84f4f'
-    green:   '0xb7ce42'
-    yellow:  '0xfea63c'
-    blue:    '0x66a9b9'
-    magenta: '0xb7416e'
-    cyan:    '0x6d878d'
-    white:   '0xcccccc'
+    black:   '0x000000'
+    red:     '0xd54e53'
+    green:   '0xb9ca4a'
+    yellow:  '0xe6c547'
+    blue:    '0x7aa6da'
+    magenta: '0xc397d8'
+    cyan:    '0x70c0ba'
+    white:   '0xffffff'
 
   # Bright colors
   bright:
     black:   '0x666666'
-    red:     '0xd23d3d'
-    green:   '0xbde077'
-    yellow:  '0xffe863'
-    blue:    '0xaaccbb'
-    magenta: '0xe16a98'
-    cyan:    '0x42717b'
-    white:   '0xffffff'
+    red:     '0xff3334'
+    green:   '0x9ec400'
+    yellow:  '0xe7c547'
+    blue:    '0x7aa6da'
+    magenta: '0xb77ee0'
+    cyan:    '0x54ced6'
+    white:   '0xfefefe'
 
 # Visual Bell
 #
@@ -268,7 +240,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-#background_opacity: 1.0
+#background_opacity: 0.9
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
