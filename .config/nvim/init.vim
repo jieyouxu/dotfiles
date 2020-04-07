@@ -53,15 +53,16 @@ Plug 'rust-lang/rust.vim'
 Plug 'arzg/vim-rust-syntax-ext'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'sheerun/vim-polyglot'
 
 " Colorscheme
 "Plug 'arzg/vim-colors-xcode'
 "Plug 'srcery-colors/srcery-vim'
-"Plug 'NLKNguyen/papercolor-theme'
+Plug 'NLKNguyen/papercolor-theme'
 "Plug 'chriskempson/base16-vim'
 "Plug 'nightsense/cosmic_latte'
 "Plug 'morhetz/gruvbox'
-Plug 'cormacrelf/vim-colors-github'
+"Plug 'cormacrelf/vim-colors-github'
 
 call plug#end()
 
@@ -104,10 +105,10 @@ endif
 set background=dark
 "colorscheme xcodedarkhc
 "colorscheme srcery
-"colorscheme PaperColor
+colorscheme PaperColor
 "colorscheme base16-gruvbox-dark-hard
 "colorscheme cosmic_latte
-colorscheme github
+"colorscheme github
 
 " Get syntax
 syntax on
