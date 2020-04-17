@@ -25,9 +25,6 @@
 # tools (e.g. `cpputest`)
 !tools/
 
-# `yarn` config
-!.yarnrc
-
 # `zsh` config
 !.zshrc
 
