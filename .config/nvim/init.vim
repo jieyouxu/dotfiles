@@ -32,8 +32,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'terryma/vim-expand-region'
 
 " GUI enhancements
-"Plug 'itchyny/lightline.vim'
-Plug 'rbong/vim-crystalline'
+Plug 'itchyny/lightline.vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'andymass/vim-matchup'
 Plug 'tpope/vim-fugitive'
@@ -58,11 +57,14 @@ Plug 'sheerun/vim-polyglot'
 " Colorscheme
 "Plug 'arzg/vim-colors-xcode'
 "Plug 'srcery-colors/srcery-vim'
-Plug 'NLKNguyen/papercolor-theme'
+"Plug 'NLKNguyen/papercolor-theme'
 "Plug 'chriskempson/base16-vim'
 "Plug 'nightsense/cosmic_latte'
-"Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 "Plug 'cormacrelf/vim-colors-github'
+"Plug 'drewtempelmeyer/palenight.vim'
+"Plug 'nanotech/jellybeans.vim'
+"Plug 'balanceiskey/vim-framer-syntax'
 
 call plug#end()
 
@@ -101,14 +103,24 @@ endif
 " Base16
 "let base16colorspace=256
 
+" Gruvbox
+let g:gruvbox_contrast_dark = "hard"
+let g:gruvbox_italicize_comments = 0
+
 " Colors
 set background=dark
-"colorscheme xcodedarkhc
+"set background=light
+"colorscheme xcodelighthc
 "colorscheme srcery
-colorscheme PaperColor
+"colorscheme PaperColor
 "colorscheme base16-gruvbox-dark-hard
+"colorscheme base16-default-dark
 "colorscheme cosmic_latte
 "colorscheme github
+"colorscheme palenight
+"colorscheme jellybeans
+"colorscheme vim-framer-syntax
+colorscheme gruvbox
 
 " Get syntax
 syntax on
@@ -129,57 +141,56 @@ let g:secure_modelines_allowed_items = [
 
 
 " Lightline
-"let g:lightline = {
-"      "\ 'colorscheme': 'srcery',
-"      \ 'colorscheme': 'PaperColor',
-"      \ 'component_function': {
-"      \   'filename': 'LightlineFilename',
-"      \ },
-"      \ 'separator': { 'left': '', 'right': '' },
-"      \ 'subseparator': { 'left': '', 'right': '' }
-"\ }
+let g:lightline = {
+      \ 'colorscheme': 'framer',
+      \ 'component_function': {
+      \   'filename': 'LightlineFilename',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
+      \ }
 
-"function! LightlineFilename()
-"  return expand('%:t') !=# '' ? @% : '[No Name]'
-"endfunction
+function! LightlineFilename()
+  return expand('%:t') !=# '' ? @% : '[No Name]'
+endfunction
 
 " Crystalline
-function! StatusLine(current, width)
-  let l:s = ''
-
-  if a:current
-    let l:s .= crystalline#mode() . crystalline#right_mode_sep('')
-  else
-    let l:s .= '%#CrystallineInactive#'
-  endif
-  let l:s .= ' %f%h%w%m%r '
-  if a:current
-    let l:s .= crystalline#right_sep('', 'Fill') . ' %{fugitive#head()}'
-  endif
-
-  let l:s .= '%='
-  if a:current
-    let l:s .= crystalline#left_sep('', 'Fill') . ' %{&paste ?"PASTE ":""}%{&spell?"SPELL ":""}'
-    let l:s .= crystalline#left_mode_sep('')
-  endif
-  if a:width > 80
-    let l:s .= ' %{&ft}[%{&fenc!=#""?&fenc:&enc}][%{&ff}] %l/%L %c%V %P '
-  else
-    let l:s .= ' '
-  endif
-
-  return l:s
-endfunction
-
-function! TabLine()
-  let l:vimlabel = has('nvim') ?  ' NVIM ' : ' VIM '
-  return crystalline#bufferline(2, len(l:vimlabel), 1) . '%=%#CrystallineTab# ' . l:vimlabel
-endfunction
-
-let g:crystalline_enable_sep = 1
-let g:crystalline_statusline_fn = 'StatusLine'
-let g:crystalline_tabline_fn = 'TabLine'
-let g:crystalline_theme = 'papercolor'
+"function! StatusLine(current, width)
+"  let l:s = ''
+"
+"  if a:current
+"    let l:s .= crystalline#mode() . crystalline#right_mode_sep('')
+"  else
+"    let l:s .= '%#CrystallineInactive#'
+"  endif
+"  let l:s .= ' %f%h%w%m%r '
+"  if a:current
+"    let l:s .= crystalline#right_sep('', 'Fill') . ' %{fugitive#head()}'
+"  endif
+"
+"  let l:s .= '%='
+"  if a:current
+"    let l:s .= crystalline#left_sep('', 'Fill') . ' %{&paste ?"PASTE ":""}%{&spell?"SPELL ":""}'
+"    let l:s .= crystalline#left_mode_sep('')
+"  endif
+"  if a:width > 80
+"    let l:s .= ' %{&ft}[%{&fenc!=#""?&fenc:&enc}][%{&ff}] %l/%L %c%V %P '
+"  else
+"    let l:s .= ' '
+"  endif
+"
+"  return l:s
+"endfunction
+"
+"function! TabLine()
+"  let l:vimlabel = has('nvim') ?  ' NVIM ' : ' VIM '
+"  return crystalline#bufferline(2, len(l:vimlabel), 1) . '%=%#CrystallineTab# ' . l:vimlabel
+"endfunction
+"
+"let g:crystalline_enable_sep = 1
+"let g:crystalline_statusline_fn = 'StatusLine'
+"let g:crystalline_tabline_fn = 'TabLine'
+"let g:crystalline_theme = 'default'
 
 set showtabline=2
 set guioptions-=e
@@ -259,6 +270,7 @@ let g:vim_markdown_frontmatter = 1
 set printfont=:h10
 set printencoding=utf-8
 set printoptions=paper:letter
+
 " Always draw sign column. Prevent buffer moving when adding/deleting sign.
 set signcolumn=yes
 
