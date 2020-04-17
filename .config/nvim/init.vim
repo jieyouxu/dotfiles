@@ -142,7 +142,7 @@ let g:secure_modelines_allowed_items = [
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'framer',
+      \ 'colorscheme': 'gruvbox',
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
