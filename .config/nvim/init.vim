@@ -30,12 +30,19 @@ Plug 'ciaranm/securemodelines'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'justinmk/vim-sneak'
 Plug 'terryma/vim-expand-region'
+Plug 'unblevable/quick-scope'
 
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'andymass/vim-matchup'
 Plug 'tpope/vim-fugitive'
+
+" NERDTree directory and file listings
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'ryanoasis/vim-devicons'
 
 " Fuzzy finder
 Plug 'airblade/vim-rooter'
@@ -49,22 +56,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
 Plug 'rust-lang/rust.vim'
-Plug 'arzg/vim-rust-syntax-ext'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'sheerun/vim-polyglot'
 
 " Colorscheme
-"Plug 'arzg/vim-colors-xcode'
-"Plug 'srcery-colors/srcery-vim'
-"Plug 'NLKNguyen/papercolor-theme'
-"Plug 'chriskempson/base16-vim'
-"Plug 'nightsense/cosmic_latte'
-Plug 'morhetz/gruvbox'
-"Plug 'cormacrelf/vim-colors-github'
-"Plug 'drewtempelmeyer/palenight.vim'
-"Plug 'nanotech/jellybeans.vim'
-"Plug 'balanceiskey/vim-framer-syntax'
+Plug 'srcery-colors/srcery-vim'
 
 call plug#end()
 
@@ -100,27 +97,9 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-" Base16
-"let base16colorspace=256
-
-" Gruvbox
-let g:gruvbox_contrast_dark = "hard"
-let g:gruvbox_italicize_comments = 0
-
 " Colors
 set background=dark
-"set background=light
-"colorscheme xcodelighthc
-"colorscheme srcery
-"colorscheme PaperColor
-"colorscheme base16-gruvbox-dark-hard
-"colorscheme base16-default-dark
-"colorscheme cosmic_latte
-"colorscheme github
-"colorscheme palenight
-"colorscheme jellybeans
-"colorscheme vim-framer-syntax
-colorscheme gruvbox
+colorscheme srcery
 
 " Get syntax
 syntax on
@@ -139,10 +118,9 @@ let g:secure_modelines_allowed_items = [
                 \ "colorcolumn"
                 \ ]
 
-
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'srcery',
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
@@ -153,44 +131,6 @@ let g:lightline = {
 function! LightlineFilename()
   return expand('%:t') !=# '' ? @% : '[No Name]'
 endfunction
-
-" Crystalline
-"function! StatusLine(current, width)
-"  let l:s = ''
-"
-"  if a:current
-"    let l:s .= crystalline#mode() . crystalline#right_mode_sep('')
-"  else
-"    let l:s .= '%#CrystallineInactive#'
-"  endif
-"  let l:s .= ' %f%h%w%m%r '
-"  if a:current
-"    let l:s .= crystalline#right_sep('', 'Fill') . ' %{fugitive#head()}'
-"  endif
-"
-"  let l:s .= '%='
-"  if a:current
-"    let l:s .= crystalline#left_sep('', 'Fill') . ' %{&paste ?"PASTE ":""}%{&spell?"SPELL ":""}'
-"    let l:s .= crystalline#left_mode_sep('')
-"  endif
-"  if a:width > 80
-"    let l:s .= ' %{&ft}[%{&fenc!=#""?&fenc:&enc}][%{&ff}] %l/%L %c%V %P '
-"  else
-"    let l:s .= ' '
-"  endif
-"
-"  return l:s
-"endfunction
-"
-"function! TabLine()
-"  let l:vimlabel = has('nvim') ?  ' NVIM ' : ' VIM '
-"  return crystalline#bufferline(2, len(l:vimlabel), 1) . '%=%#CrystallineTab# ' . l:vimlabel
-"endfunction
-"
-"let g:crystalline_enable_sep = 1
-"let g:crystalline_statusline_fn = 'StatusLine'
-"let g:crystalline_tabline_fn = 'TabLine'
-"let g:crystalline_theme = 'default'
 
 set showtabline=2
 set guioptions-=e
@@ -251,6 +191,9 @@ inoremap <silent><expr> <c-.> coc#refresh()
 " Or use `complete_info` if your vim support it, like:
 inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 
+" NERDTree column width
+let g:NERDTreeWinSize=60
+
 " =============================================================================
 " # Editor settings
 " =============================================================================
@@ -296,7 +239,7 @@ set noexpandtab
 " Wrapping options
 set textwidth=80 " default to 80 columns for all file types
 set wrapmargin=0
-set wrap
+set nowrap
 set formatoptions=tc " wrap text and comments using textwidth
 set formatoptions+=r " continue comments when pressing ENTER in I mode
 set formatoptions+=q " enable formatting of comments with gq
@@ -411,7 +354,6 @@ command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, {'source': s:list_cmd(),
   \                               'options': '--tiebreak=index'}, <bang>0)
 
-
 " Open new file adjacent to current file
 nnoremap <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
@@ -489,6 +431,9 @@ noremap <Leader>P "+p
 " register
 nnoremap <leader>d "_d
 
+" Toggle NERDTree tab
+map <C-n> :NERDTreeToggle<CR>
+
 " =============================================================================
 " # Autocommands
 " =============================================================================
@@ -501,3 +446,6 @@ au Filetype rust set textwidth=100
 autocmd BufRead *.md set filetype=markdown
 autocmd BufRead *.trm set filetype=c
 autocmd BufRead *.xlsx.axlsx set filetype=ruby
+
+" Close nvim if last tab remaining is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
