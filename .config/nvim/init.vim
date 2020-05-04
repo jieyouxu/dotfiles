@@ -8,9 +8,7 @@
 "
 " CONFIGURATION FILE
 "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" " Adapted from: [jonhoo/configs](https://github.com/jonhoo/configs).
-"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" " " Adapted from: [jonhoo/configs](https://github.com/jonhoo/configs). "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Use standard `bash` because `fish` has different syntax
@@ -30,7 +28,6 @@ Plug 'ciaranm/securemodelines'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'justinmk/vim-sneak'
 Plug 'terryma/vim-expand-region'
-Plug 'unblevable/quick-scope'
 
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
@@ -40,9 +37,6 @@ Plug 'tpope/vim-fugitive'
 
 " NERDTree directory and file listings
 Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'ryanoasis/vim-devicons'
 
 " Fuzzy finder
 Plug 'airblade/vim-rooter'
@@ -56,12 +50,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
 Plug 'rust-lang/rust.vim'
-Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'sheerun/vim-polyglot'
 
+" Formatting
+Plug 'godlygeek/tabular'
+
 " Colorscheme
-Plug 'srcery-colors/srcery-vim'
+Plug 'gruvbox-community/gruvbox'
 
 call plug#end()
 
@@ -98,11 +94,15 @@ if exists('+termguicolors')
 endif
 
 " Colors
+let g:gruvbox_contrast_dark = "hard"
 set background=dark
-colorscheme srcery
+colorscheme gruvbox
 
 " Get syntax
 syntax on
+
+" Rainbow highlighting for delimiters
+let g:rainbow_active = 1
 
 " Plugin settings
 let g:secure_modelines_allowed_items = [
@@ -120,7 +120,7 @@ let g:secure_modelines_allowed_items = [
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'srcery',
+      \ 'colorscheme': 'gruvbox',
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
@@ -193,6 +193,45 @@ inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<
 
 " NERDTree column width
 let g:NERDTreeWinSize=60
+
+" Better `universal-ctags` support for Rust
+let g:rust_use_custom_ctags_defs = 1
+let g:tagbar_type_rust = {
+  \ 'ctagsbin' : '/usr/local/bin/ctags',
+  \ 'ctagstype' : 'rust',
+  \ 'kinds' : [
+      \ 'n:modules',
+      \ 's:structures:1',
+      \ 'i:interfaces',
+      \ 'c:implementations',
+      \ 'f:functions:1',
+      \ 'g:enumerations:1',
+      \ 't:type aliases:1:0',
+      \ 'v:constants:1:0',
+      \ 'M:macros:1',
+      \ 'm:fields:1:0',
+      \ 'e:enum variants:1:0',
+      \ 'P:methods:1',
+  \ ],
+  \ 'sro': '::',
+  \ 'kind2scope' : {
+      \ 'n': 'module',
+      \ 's': 'struct',
+      \ 'i': 'interface',
+      \ 'c': 'implementation',
+      \ 'f': 'function',
+      \ 'g': 'enum',
+      \ 't': 'typedef',
+      \ 'v': 'variable',
+      \ 'M': 'macro',
+      \ 'm': 'field',
+      \ 'e': 'enumerator',
+      \ 'P': 'method',
+  \ },
+\ }
+
+let g:tagbar_autofocus = 0
+let g:tagbar_width = 60
 
 " =============================================================================
 " # Editor settings
@@ -373,6 +412,12 @@ nnoremap <right> :bn<CR>
 nnoremap j gj
 nnoremap k gk
 
+" Move lines
+nnoremap <S-Up> :m-2<CR>==
+nnoremap <S-Down> :m+<CR>==
+inoremap <S-Up> <Esc>:m-2<CR>==gi
+inoremap <S-Down> <Esc>:m+<CR>==gi
+
 " 'Smart' nevigation
 nmap <silent> E <Plug>(coc-diagnostic-prev)
 nmap <silent> W <Plug>(coc-diagnostic-next)
@@ -434,6 +479,9 @@ nnoremap <leader>d "_d
 " Toggle NERDTree tab
 map <C-n> :NERDTreeToggle<CR>
 
+" Toggle tags
+nmap <F8> :TagbarToggle<CR>
+
 " =============================================================================
 " # Autocommands
 " =============================================================================
@@ -449,3 +497,6 @@ autocmd BufRead *.xlsx.axlsx set filetype=ruby
 
 " Close nvim if last tab remaining is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Open Tagbar only for support file formats
+autocmd FileType c,cpp,rs nested :TagbarOpen
