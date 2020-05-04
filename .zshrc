@@ -129,9 +129,6 @@ export EDITOR='nvim'
 alias reset="clear && printf '\e[3J'"
 alias cls="reset"
 
-# Use neovim instead of vim
-alias vim="nvim"
-
 # use `rmtrash` to move files into recycle bin
 alias trash="rmtrash"
 alias del="rmtrash"
@@ -272,7 +269,7 @@ export PATH="$PATH:/usr/local/opt/llvm/bin"
 ### OCaml ###
 
 # [Opam Configuration]
-#test -r /Users/jieyouxu/.opam/opam-init/init.zsh && . /Users/jieyouxu/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+test -r /Users/jieyouxu/.opam/opam-init/init.zsh && . /Users/jieyouxu/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 ### Golang ###
 
