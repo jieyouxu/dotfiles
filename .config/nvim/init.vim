@@ -61,6 +61,7 @@ Plug 'godlygeek/tabular'
 
 " Colorscheme
 Plug 'gruvbox-community/gruvbox'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
@@ -98,8 +99,10 @@ endif
 
 " Colors
 let g:gruvbox_contrast_dark = "hard"
+let base16colorspace=256
 set background=dark
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme base16-atelier-dune
 
 " Get syntax
 syntax on
@@ -123,7 +126,7 @@ let g:secure_modelines_allowed_items = [
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'default',
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
