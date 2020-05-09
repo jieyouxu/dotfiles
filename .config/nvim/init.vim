@@ -1,4 +1,4 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "  _   _        __      ___           
 " | \ | |       \ \    / (_)          
 " |  \| | ___  __\ \  / / _ _ __ ___  
@@ -28,12 +28,15 @@ Plug 'ciaranm/securemodelines'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'justinmk/vim-sneak'
 Plug 'terryma/vim-expand-region'
+Plug 'airblade/vim-gitgutter'
+
+" Detect indent
+Plug 'tpope/vim-sleuth'
+Plug 'Yggdroot/indentLine'
 
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
 Plug 'machakann/vim-highlightedyank'
-Plug 'andymass/vim-matchup'
-Plug 'tpope/vim-fugitive'
 
 " NERDTree directory and file listings
 Plug 'preservim/nerdtree'
@@ -124,8 +127,6 @@ let g:lightline = {
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
       \ }
 
 function! LightlineFilename()
@@ -241,8 +242,8 @@ set autoindent
 set timeoutlen=300 " http://stackoverflow.com/questions/2158516/delay-before-o-opens-a-new-line
 set encoding=utf-8
 set scrolloff=2
-set cursorline
 set noshowmode
+set nocursorline
 set hidden
 set nojoinspaces
 let g:sneak#s_next = 1
@@ -311,7 +312,6 @@ set vb t_vb= " No more beeps
 set backspace=2 " Backspace over newlines
 set nofoldenable
 set ttyfast
-" https://github.com/vim/vim/issues/1735#issuecomment-383353563
 set lazyredraw
 set synmaxcol=500
 set laststatus=2
@@ -324,10 +324,7 @@ set colorcolumn=80 " and give me a colored column
 set showcmd " Show (partial) command in status line.
 set mouse=a " Enable mouse usage (all modes) in terminals
 set shortmess+=c " don't give |ins-completion-menu| messages.
-
-" Show those damn hidden characters
-" Verbose: set listchars=nbsp:¬,eol:¶,extends:»,precedes:«,trail:•
-set listchars=nbsp:¬,extends:»,precedes:«,trail:•
+set nolist
 
 " =============================================================================
 " # Keyboard shortcuts
@@ -479,9 +476,6 @@ nnoremap <leader>d "_d
 " Toggle NERDTree tab
 map <C-n> :NERDTreeToggle<CR>
 
-" Toggle tags
-nmap <F8> :TagbarToggle<CR>
-
 " =============================================================================
 " # Autocommands
 " =============================================================================
@@ -497,6 +491,3 @@ autocmd BufRead *.xlsx.axlsx set filetype=ruby
 
 " Close nvim if last tab remaining is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" Open Tagbar only for support file formats
-autocmd FileType c,cpp,rs nested :TagbarOpen
