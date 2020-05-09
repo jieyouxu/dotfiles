@@ -193,8 +193,10 @@ alias date="gdate"
 # `serve` alternative with rust `sfz`
 alias serve="sfz"
 
-# TMUX alias (attach session)
+# tmux alias (attach session or create new session)
 alias t="tmux attach || tmux"
+# tmux kill server
+alias tkill="tmux kill-server"
 
 ### Python ###
 
@@ -269,7 +271,8 @@ export PATH="$PATH:/usr/local/opt/llvm/bin"
 ### OCaml ###
 
 # [Opam Configuration]
-test -r /Users/jieyouxu/.opam/opam-init/init.zsh && . /Users/jieyouxu/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+#test -r /Users/jieyouxu/.opam/opam-init/init.zsh \ 
+#  && . /Users/jieyouxu/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 ### Golang ###
 
@@ -280,12 +283,14 @@ test -r /Users/jieyouxu/.opam/opam-init/init.zsh && . /Users/jieyouxu/.opam/opam
 ### QEMU ###
 
 # [Default QEMU Target]
-alias qemu="qemu-system-x86_64"
+#alias qemu="qemu-system-x86_64"
 
 ### PostgreSQL ###
 
 # [PostgreSQL]
-export PATH="/usr/local/opt/postgresql/bin:$PATH"
+export PATH="$PATH:/usr/local/opt/postgresql/bin"
+
+### Emacs ###
 
 ### Directory Aliases ###
 
