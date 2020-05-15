@@ -5,7 +5,6 @@
 	email = jieyouxu@outlook.com
 	signingKey = 7FF628F1AC36CFC9A224A2D595DDEBD74A1DC2C0
 [commit]
-	template = /Users/jieyouxu/.stCommitMsg
 	gpgsign = true
 [alias]
 	lg = log --graph --pretty=format:'[%Cred%h%Creset]%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
@@ -21,21 +20,6 @@
 	diff = auto
 	status = auto
 	ui = true
-[color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
-[color "diff"]
-	meta = 11
-	frag = magenta bold
-	old = red bold
-	new = green bold
-	commit = yellow bold
-	whitespace = red reverse
-[color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -43,10 +27,5 @@
 	required = true
 [core]
 	editor = nvim
-	pager = delta --dark
-[merge]
-	tool = nvim
-[diff]
-	tool = delta --dark
 [sequence]
 	editor = interactive-rebase-tool
