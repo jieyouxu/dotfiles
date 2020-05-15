@@ -26,7 +26,6 @@ call plug#begin()
 " VIM enhancements
 Plug 'ciaranm/securemodelines'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'justinmk/vim-sneak'
 Plug 'terryma/vim-expand-region'
 Plug 'airblade/vim-gitgutter'
 
@@ -60,8 +59,13 @@ Plug 'sheerun/vim-polyglot'
 Plug 'godlygeek/tabular'
 
 " Colorscheme
-Plug 'gruvbox-community/gruvbox'
+"Plug 'gruvbox-community/gruvbox'
 Plug 'chriskempson/base16-vim'
+"Plug 'nanotech/jellybeans.vim'
+"Plug 'srcery-colors/srcery-vim'
+"Plug 'andreypopp/vim-colors-plain'
+"Plug 'NLKNguyen/papercolor-theme'
+"Plug 'jacoborus/tender.vim'
 
 call plug#end()
 
@@ -103,12 +107,12 @@ let base16colorspace=256
 set background=dark
 "colorscheme gruvbox
 colorscheme base16-atelier-dune
+"colorscheme srcery
+"colorscheme plain
+"colorscheme tender
 
 " Get syntax
 syntax on
-
-" Rainbow highlighting for delimiters
-let g:rainbow_active = 1
 
 " Plugin settings
 let g:secure_modelines_allowed_items = [
