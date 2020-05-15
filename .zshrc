@@ -246,6 +246,13 @@ alias java13="export JAVA_HOME=$JAVA_13_HOME"
 # [Default Java Version]
 java13
 
+### Node ###
+
+# [Node Version Manager]
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 ### Swift ###
 
 # [Swift Distribution]
