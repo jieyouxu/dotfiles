@@ -1,7 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "  _   _        __      ___           
-" | \ | |       \ \    / (_)          
-" |  \| | ___  __\ \  / / _ _ __ ___  
+" | \ | |       \ \    / (_)          " |  \| | ___  __\ \  / / _ _ __ ___  
 " | . ` |/ _ \/ _ \ \/ / | | '_ ` _ \ 
 " | |\  |  __/ (_) \  /  | | | | | | |
 " |_| \_|\___|\___/ \/   |_|_| |_| |_|
@@ -59,8 +58,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'godlygeek/tabular'
 
 " Colorscheme
-"Plug 'gruvbox-community/gruvbox'
-Plug 'chriskempson/base16-vim'
+Plug 'gruvbox-community/gruvbox'
+"Plug 'chriskempson/base16-vim'
 "Plug 'nanotech/jellybeans.vim'
 "Plug 'srcery-colors/srcery-vim'
 "Plug 'andreypopp/vim-colors-plain'
@@ -105,8 +104,8 @@ endif
 let g:gruvbox_contrast_dark = "hard"
 let base16colorspace=256
 set background=dark
-"colorscheme gruvbox
-colorscheme base16-atelier-dune
+colorscheme gruvbox
+"colorscheme base16-atelier-dune
 "colorscheme srcery
 "colorscheme plain
 "colorscheme tender
@@ -130,7 +129,7 @@ let g:secure_modelines_allowed_items = [
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'default',
+      \ 'colorscheme': 'gruvbox',
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
@@ -498,3 +497,8 @@ autocmd BufRead *.xlsx.axlsx set filetype=ruby
 
 " Close nvim if last tab remaining is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" =============================================================================
+" # Highlighting Overrides
+" =============================================================================
+highlight Normal ctermbg=232 guibg=#171819
