@@ -15,6 +15,7 @@
 	rb = rebase
 	cm = commit
 	rs = restore --staged .
+	commit = commit --cleanup=scissors
 [color]
 	branch = auto
 	diff = auto
