@@ -8,7 +8,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 # [Theme]
-ZSH_THEME="common"
+ZSH_THEME=""
 
 # [Default User]
 DEFAULT_USER="jieyouxu"
@@ -299,6 +299,9 @@ export PATH="$PATH:/usr/local/opt/postgresql/bin"
 
 ### Emacs ###
 
+# [Doom Executables]
+export PATH="$PATH:$HOME/.emacs.d/bin"
+
 ### Directory Aliases ###
 
 # [Repository Alias]
@@ -324,3 +327,5 @@ alias cducl="cd ~/Documents/University"
 ### Rust `zoxide` (`z` alternative) ###
 
 eval "$(zoxide init zsh)"
+
+eval "$(starship init zsh)"
