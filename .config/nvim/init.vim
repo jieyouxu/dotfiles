@@ -30,7 +30,6 @@ Plug 'airblade/vim-gitgutter'
 
 " Detect indent
 Plug 'tpope/vim-sleuth'
-Plug 'Yggdroot/indentLine'
 
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
@@ -236,9 +235,6 @@ let g:tagbar_type_rust = {
       \ 'P': 'method',
   \ },
 \ }
-
-let g:tagbar_autofocus = 0
-let g:tagbar_width = 60
 
 " =============================================================================
 " # Editor settings
