@@ -184,9 +184,6 @@ alias find="fd"
 # `top` alternative with rust `ytop`
 alias top="ytop"
 
-# `ps` alternative with rust `procs`
-alias ps="procs --watch"
-
 # Use 'gdate' (GNU coreutils `date`) instead of macOS `date`
 alias date="gdate"
 
