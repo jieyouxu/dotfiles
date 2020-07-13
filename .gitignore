@@ -64,6 +64,10 @@
 !.config/kitty/
 !.config/kitty/*.conf
 
+# `fish` config
+!.config/fish/
+!.config/fish/**/*
+
 # `$ZSH_CUSTOM` themes
 !.oh-my-zsh/
 !.oh-my-zsh/custom/
