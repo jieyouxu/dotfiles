@@ -30,3 +30,5 @@
 	editor = nvim
 [sequence]
 	editor = interactive-rebase-tool
+[pull]
+	ff = only

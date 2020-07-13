@@ -32,7 +32,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-sleuth'
 
 " GUI enhancements
-Plug 'itchyny/lightline.vim'
+"Plug 'itchyny/lightline.vim'
 Plug 'machakann/vim-highlightedyank'
 
 " NERDTree directory and file listings
@@ -57,13 +57,12 @@ Plug 'sheerun/vim-polyglot'
 Plug 'godlygeek/tabular'
 
 " Colorscheme
-Plug 'gruvbox-community/gruvbox'
-"Plug 'chriskempson/base16-vim'
-"Plug 'nanotech/jellybeans.vim'
+"Plug 'gruvbox-community/gruvbox'
+Plug 'chriskempson/base16-vim'
 "Plug 'srcery-colors/srcery-vim'
-"Plug 'andreypopp/vim-colors-plain'
 "Plug 'NLKNguyen/papercolor-theme'
-"Plug 'jacoborus/tender.vim'
+"Plug 'andreasvc/vim-256noir'
+"Plug 'git@gitlab.com:yorickpeterse/happy_hacking.vim.git'
 
 call plug#end()
 
@@ -103,11 +102,14 @@ endif
 let g:gruvbox_contrast_dark = "hard"
 let base16colorspace=256
 set background=dark
-colorscheme gruvbox
+"colorscheme gruvbox
 "colorscheme base16-atelier-dune
-"colorscheme srcery
-"colorscheme plain
-"colorscheme tender
+colorscheme base16-gruvbox-dark-hard
+"colorscheme happy_hacking
+set cursorline
+highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#121212
+autocmd InsertEnter * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1c1c1c
+autocmd InsertLeave * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#121212
 
 " Get syntax
 syntax on
@@ -116,7 +118,7 @@ syntax on
 let g:secure_modelines_allowed_items = [
                 \ "textwidth",   "tw",
                 \ "softtabstop", "sts",
-				\ "tabstop",     "ts",
+		\ "tabstop",     "ts",
                 \ "shiftwidth",  "sw",
                 \ "expandtab",   "et",   "noexpandtab", "noet",
                 \ "filetype",    "ft",
@@ -128,7 +130,7 @@ let g:secure_modelines_allowed_items = [
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'default',
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
@@ -137,10 +139,6 @@ let g:lightline = {
 function! LightlineFilename()
   return expand('%:t') !=# '' ? @% : '[No Name]'
 endfunction
-
-set showtabline=2
-set guioptions-=e
-set laststatus=2
 
 " Adapted from http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
 if executable('ag')
@@ -244,7 +242,7 @@ set autoindent
 set timeoutlen=300 " http://stackoverflow.com/questions/2158516/delay-before-o-opens-a-new-line
 set encoding=utf-8
 set scrolloff=2
-set noshowmode
+set showmode
 set nocursorline
 set hidden
 set nojoinspaces
@@ -316,7 +314,7 @@ set nofoldenable
 set ttyfast
 set lazyredraw
 set synmaxcol=500
-set laststatus=2
+set laststatus=1
 set number " Also show current absolute line
 set diffopt+=iwhite " No whitespace in vimdiff
 " Make diffing better: https://vimways.org/2018/the-power-of-diff/
@@ -497,4 +495,4 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " =============================================================================
 " # Highlighting Overrides
 " =============================================================================
-highlight Normal ctermbg=232 guibg=#171819
+"highlight Normal ctermbg=232 guibg=#171819

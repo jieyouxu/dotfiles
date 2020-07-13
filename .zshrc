@@ -8,7 +8,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 # [Theme]
-ZSH_THEME=""
+ZSH_THEME="common"
 
 # [Default User]
 DEFAULT_USER="jieyouxu"
@@ -324,5 +324,3 @@ alias cducl="cd ~/Documents/University"
 ### Rust `zoxide` (`z` alternative) ###
 
 eval "$(zoxide init zsh)"
-
-eval "$(starship init zsh)"
