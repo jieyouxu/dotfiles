@@ -308,9 +308,6 @@ colors:
   # When set to `true`, selected text will be copied to the primary clipboard.
   #save_to_clipboard: false
 
-# Allow terminal applications to change Alacritty's window title.
-dynamic_title: true
-
 cursor:
   # Cursor style
   #
@@ -336,10 +333,17 @@ cursor:
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
+#shell:
+#   program: /usr/local/bin/zsh
+#   args:
+#     - --login
+#     - -c
+#     - "tmux attach || tmux"
+
 shell:
-   program: /usr/local/bin/zsh
+   program: /usr/local/bin/fish
    args:
-     - -l
+     - --login
      - -c
      - "tmux attach || tmux"
 
