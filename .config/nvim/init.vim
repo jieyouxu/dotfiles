@@ -28,11 +28,12 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'terryma/vim-expand-region'
 Plug 'airblade/vim-gitgutter'
 
+Plug 'hardcoreplayers/dashboard-nvim'
+
 " Detect indent
 Plug 'tpope/vim-sleuth'
 
 " GUI enhancements
-"Plug 'itchyny/lightline.vim'
 Plug 'machakann/vim-highlightedyank'
 
 " NERDTree directory and file listings
@@ -55,6 +56,9 @@ Plug 'sheerun/vim-polyglot'
 
 " Formatting
 Plug 'godlygeek/tabular'
+
+" Silicon (code screenshot)
+Plug 'segeljakt/vim-silicon'
 
 " Colorscheme
 "Plug 'gruvbox-community/gruvbox'
@@ -232,7 +236,40 @@ let g:tagbar_type_rust = {
       \ 'e': 'enumerator',
       \ 'P': 'method',
   \ },
-\ }
+\}
+
+nmap <Leader>ss :<C-u>SessionSave<CR>
+nmap <Leader>sl :<C-u>SessionLoad<CR>
+nnoremap <silent> <Leader>fh :History<CR>
+nnoremap <silent> <Leader>ff :Files<CR>
+nnoremap <silent> <Leader>tc :Colors<CR>
+nnoremap <silent> <Leader>fa :Rg<CR>
+nnoremap <silent> <Leader>fb :Marks<CR>
+
+let g:dashboard_custom_shortcut={
+  \ 'last_session'       : 'SPC s l',
+  \ 'find_history'       : 'SPC f h',
+  \ 'find_file'          : 'SPC f f',
+  \ 'change_colorscheme' : 'SPC t c',
+  \ 'find_word'          : 'SPC f a',
+  \ 'book_marks'         : 'SPC f b',
+  \ }
+
+let g:silicon = {
+      \   'theme':          'OneHalfDark',
+      \   'font':         'IBM Plex Mono',
+      \   'background':         '#AAAAFF',
+      \   'shadow-color':       '#555555',
+      \   'line-pad':                   2,
+      \   'pad-horiz':                 80,
+      \   'pad-vert':                 100,
+      \   'shadow-blur-radius':         0,
+      \   'shadow-offset-x':            0,
+      \   'shadow-offset-y':            0,
+      \   'line-number':           v:true,
+      \   'round-corner':          v:true,
+      \   'window-controls':       v:true,
+      \ }
 
 " =============================================================================
 " # Editor settings
