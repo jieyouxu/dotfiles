@@ -10,8 +10,9 @@ abbr -a gst 'git status'
 abbr -a vimdiff 'nvim -d'
 abbr -a ct 'cargo t'
 abbr -a cls "clear && printf '\e[3J'"
+abbr -a cargo-annoy 'cargo clippy -- -D clippy::correctness -D clippy::complexity -D clippy::pedantic -D clippy::perf -D clippy::cargo'
 
-set -U fish_user_paths /usr/local/sbin /usr/local/bin /usr/bin /bin
+set -U fish_user_paths $HOME/.cargo/bin /usr/local/sbin /usr/local/bin /usr/bin /bin
 
 if status --is-interactive
 	tmux ^ /dev/null; and exec true

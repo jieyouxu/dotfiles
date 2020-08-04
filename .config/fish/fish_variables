@@ -4,6 +4,7 @@ SETUVAR __fish_classic_git_prompt_initialized:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_c:cargo
+SETUVAR _fish_abbr_cargo_2D_annoy:cargo\x20clippy\x20\x2d\x2d\x20\x2dD\x20clippy\x3a\x3acorrectness\x20\x2dD\x20clippy\x3a\x3acomplexity\x20\x2dD\x20clippy\x3a\x3apedantic\x20\x2dD\x20clippy\x3a\x3aperf\x20\x2dD\x20clippy\x3a\x3acargo
 SETUVAR _fish_abbr_cls:clear\x20\x26\x26\x20printf\x20\x27\x5ce\x5b3J\x27
 SETUVAR _fish_abbr_ct:cargo\x20t
 SETUVAR _fish_abbr_del:rmtrash
@@ -13,9 +14,9 @@ SETUVAR _fish_abbr_ga:git\x20add\x20\x2dp
 SETUVAR _fish_abbr_gah:git\x20stash\x3b\x20and\x20git\x20pull\x20\x2d\x2drebase\x3b\x20and\x20git\x20stash\x20pop
 SETUVAR _fish_abbr_gc:git\x20checkout
 SETUVAR _fish_abbr_gst:git\x20status
-SETUVAR _fish_abbr_l:ls
-SETUVAR _fish_abbr_ll:ls\x20\x2dl
-SETUVAR _fish_abbr_lll:ls\x20\x2dla
+SETUVAR _fish_abbr_l:exa
+SETUVAR _fish_abbr_ll:exa\x20\x2dl
+SETUVAR _fish_abbr_lll:exa\x20\x2dla
 SETUVAR _fish_abbr_ls:exa
 SETUVAR _fish_abbr_m:make
 SETUVAR _fish_abbr_o:open
@@ -56,4 +57,4 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/bin
+SETUVAR fish_user_paths:/Users/jieyouxu/\x2ecargo/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/bin
