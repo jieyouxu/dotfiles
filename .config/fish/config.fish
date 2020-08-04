@@ -20,7 +20,7 @@ end
 
 if command -v exa > /dev/null
 	abbr -a l 'exa'
-	abbr -a ls 'exa'
+	abbr -a ls 'exa -al'
 	abbr -a ll 'exa -l'
 	abbr -a lll 'exa -la'
 else

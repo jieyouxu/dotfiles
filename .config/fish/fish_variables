@@ -17,7 +17,7 @@ SETUVAR _fish_abbr_gst:git\x20status
 SETUVAR _fish_abbr_l:exa
 SETUVAR _fish_abbr_ll:exa\x20\x2dl
 SETUVAR _fish_abbr_lll:exa\x20\x2dla
-SETUVAR _fish_abbr_ls:exa
+SETUVAR _fish_abbr_ls:exa\x20\x2dal
 SETUVAR _fish_abbr_m:make
 SETUVAR _fish_abbr_o:open
 SETUVAR _fish_abbr_vimdiff:nvim\x20\x2dd
