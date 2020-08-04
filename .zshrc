@@ -69,10 +69,7 @@ plugins=(
   colored-man-pages
   git
   git-extras
-  osx
-  urltools
   brew
-  git-flow
   last-working-dir
   urltools
   zsh-autosuggestions
@@ -129,10 +126,6 @@ export EDITOR='nvim'
 alias reset="clear && printf '\e[3J'"
 alias cls="reset"
 
-# use `rmtrash` to move files into recycle bin
-alias trash="rmtrash"
-alias del="rmtrash"
-
 # `zsh` aliases
 alias zshconfig="open ~/.zshrc"
 alias ohmyzsh="open ~/.oh-my-zsh"
@@ -142,8 +135,6 @@ alias hlt="ack --passthru"
 
 # `rm` alternative with rust `rip`; graveyard defaults to trash
 alias rip="rip --graveyard ~/.local/share/Trash"
-alias rm="rip"
-alias del="rip"
 
 # `sed` alternative with rust `sd`
 alias sed="sd"
@@ -324,3 +315,4 @@ alias cducl="cd ~/Documents/University"
 ### Rust `zoxide` (`z` alternative) ###
 
 eval "$(zoxide init zsh)"
+if [ -e /Users/jieyouxu/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/jieyouxu/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
