@@ -14,6 +14,11 @@ abbr -a cargo-annoy 'cargo clippy -- -D clippy::correctness -D clippy::complexit
 
 set -U fish_user_paths $HOME/.cargo/bin /usr/local/sbin /usr/local/bin /usr/bin /bin
 
+# macOS uses Apple clang to pretent as GCC... let's "unpretend" it.
+if command -v gcc-10 > /dev/null
+	abbr -a gcc 'gcc-10'
+end
+
 if status --is-interactive
 	tmux ^ /dev/null; and exec true
 end

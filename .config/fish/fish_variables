@@ -13,6 +13,7 @@ SETUVAR _fish_abbr_g:git
 SETUVAR _fish_abbr_ga:git\x20add\x20\x2dp
 SETUVAR _fish_abbr_gah:git\x20stash\x3b\x20and\x20git\x20pull\x20\x2d\x2drebase\x3b\x20and\x20git\x20stash\x20pop
 SETUVAR _fish_abbr_gc:git\x20checkout
+SETUVAR _fish_abbr_gcc:gcc\x2d10
 SETUVAR _fish_abbr_gst:git\x20status
 SETUVAR _fish_abbr_l:exa
 SETUVAR _fish_abbr_ll:exa\x20\x2dl
