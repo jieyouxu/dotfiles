@@ -12,7 +12,7 @@ abbr -a ct 'cargo t'
 abbr -a cls "clear && printf '\e[3J'"
 abbr -a cargo-annoy 'cargo clippy -- -D clippy::correctness -D clippy::complexity -D clippy::pedantic -D clippy::perf -D clippy::cargo'
 
-set -U fish_user_paths $HOME/.cargo/bin /usr/local/sbin /usr/local/bin /usr/bin /bin
+set -U fish_user_paths $HOME/.cargo/bin /usr/local/anaconda3/bin /usr/local/sbin /usr/local/bin /usr/bin /bin
 
 # macOS uses Apple clang to pretent as GCC... let's "unpretend" it.
 if command -v gcc-10 > /dev/null
@@ -199,3 +199,9 @@ function fish_greeting
 end
 
 zoxide init fish | source
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /usr/local/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+
