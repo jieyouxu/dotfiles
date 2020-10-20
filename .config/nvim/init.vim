@@ -199,9 +199,6 @@ inoremap <silent><expr> <c-.> coc#refresh()
 " Or use `complete_info` if your vim support it, like:
 inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 
-" NERDTree column width
-let g:NERDTreeWinSize=60
-
 " Better `universal-ctags` support for Rust
 let g:rust_use_custom_ctags_defs = 1
 let g:tagbar_type_rust = {
@@ -250,6 +247,7 @@ let g:dashboard_custom_shortcut={
   \ 'last_session'       : 'SPC s l',
   \ 'find_history'       : 'SPC f h',
   \ 'find_file'          : 'SPC f f',
+  \ 'new_file'           : 'SPC c n',
   \ 'change_colorscheme' : 'SPC t c',
   \ 'find_word'          : 'SPC f a',
   \ 'book_marks'         : 'SPC f b',
