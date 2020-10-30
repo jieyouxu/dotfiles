@@ -132,11 +132,6 @@ setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 # Build cache
 setenv RUSTC_WRAPPER 'sccache'
 
-# For RLS
-# https://github.com/fish-shell/fish-shell/issues/2456
-setenv LD_LIBRARY_PATH (rustc +nightly --print sysroot)"/lib:$LD_LIBRARY_PATH"
-setenv RUST_SRC_PATH (rustc --print sysroot)"/lib/rustlib/src/rust/src"
-
 setenv FZF_DEFAULT_COMMAND 'fd --type file --follow'
 setenv FZF_CTRL_T_COMMAND 'fd --type file --follow'
 setenv FZF_DEFAULT_OPTS '--height 20%'
