@@ -272,7 +272,7 @@ let g:silicon = {
 " =============================================================================
 " # Editor settings
 " =============================================================================
-filetype plugin indent on
+filetype indent plugin on
 set autoindent
 set timeoutlen=300 " http://stackoverflow.com/questions/2158516/delay-before-o-opens-a-new-line
 set encoding=utf-8
@@ -518,6 +518,12 @@ map <C-n> :NERDTreeToggle<CR>
 " Follow Rust code style rules
 au Filetype rust set colorcolumn=100
 au Filetype rust set textwidth=100
+
+" Adjust git commit message rule width
+au FileType gitcommit setlocal tw=72
+au FileType gitcommit setlocal cc=+1
+set complete+=kspell
+au FileType gitcommit setlocal spell
 
 " Help filetype detection
 autocmd BufRead *.md set filetype=markdown
