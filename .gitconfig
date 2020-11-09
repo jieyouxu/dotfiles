@@ -32,3 +32,5 @@
 	editor = interactive-rebase-tool
 [pull]
 	ff = only
+[init]
+	defaultBranch = master
