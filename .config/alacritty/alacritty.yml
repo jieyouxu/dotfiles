@@ -108,7 +108,7 @@ font:
     #   - (macOS) BlexMono Nerd Font
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: "IBM Plex Mono"
+    family: "Menlo for Powerline"
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -119,7 +119,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: "IBM Plex Mono"
+    family: "Menlo for Powerline"
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -130,7 +130,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: "IBM Plex Mono"
+    family: "Menlo for Powerline"
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -141,7 +141,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: "IBM Plex Mono"
+    family: "Menlo for Powerline"
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
@@ -181,101 +181,146 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-## Colors (One Half Light)
-#colors:
-#  primary:
-#    background: '0xfafafa'
-#    foreground: '0x383a42'
-#
-#  normal:
-#    black: '0x383a42'
-#    red: '0xe45649'
-#    green: '0x50a14f'
-#    yellow: '0xc18401'
-#    blue: '0x0184bc'
-#    magenta: '0xa626a4'
-#    cyan: '0x0997b3'
-#    white: '0xfafafa'
-#
-#  bright:
-#    black: '0x383a42'
-#    red: '0xe45649'
-#    green: '0x50a14f'
-#    yellow: '0xc18401'
-#    blue: '0x0184bc'
-#    magenta: '0xa626a4'
-#    cyan: '0x0997b3'
-#    white: '0xfafafa'
-
-# Colors (Jellybeans)
-#colors:
-#  # Default colors
-#  primary:
-#    background: '#161616'
-#    foreground: '#e4e4e4'
-#
-#  # Cursor volors
-#  cursor:
-#    text: '#feffff'
-#    cursor: '#ffb472'
-#
-#  # Normal colors
-#  normal:
-#    black:   '#a3a3a3'
-#    red:     '#e98885'
-#    green:   '#a3c38b'
-#    yellow:  '#ffc68d'
-#    blue:    '#a6cae2'
-#    magenta: '#e7cdfb'
-#    cyan:    '#00a69f'
-#    white:   '#e4e4e4'
-#
-#  # Bright colors
-#  bright:
-#    black:   '#c8c8c8'
-#    red:     '#ffb2b0'
-#    green:   '#c8e2b9'
-#    yellow:  '#ffe1af'
-#    blue:    '#bddff7'
-#    magenta: '#fce2ff'
-#    cyan:    '#0bbdb6'
-#    white:   '#feffff'
-#
-#  # Selection colors
-#  selection:
-#    text: '#5963a2'
-#    background: '#f6f6f6'
-
-# Colors (Gruvbox dark)
 colors:
   # Default colors
   primary:
-    # hard contrast: background = '#1d2021'
-    background: '#32302F'
-    # soft contrast: background = '#32302f'
-    foreground: '#ebdbb2'
+    background: '#1d2021'
+    foreground: '#d5c4a1'
+
+    # Bright and dim foreground colors
+    #
+    # The dimmed foreground color is calculated automatically if it is not present.
+    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
+    # is `false`, the normal foreground color will be used.
+    #dim_foreground: '#9a9a9a'
+    #bright_foreground: '#ffffff'
+
+  # Cursor colors
+  #
+  # Colors which should be used to draw the terminal cursor.
+  #
+  # Allowed values are CellForeground and CellBackground, which reference the
+  # affected cell, or hexadecimal colors like #ff00ff.
+  cursor:
+    text: '#1d2021'
+    cursor: '#d5c4a1'
+
+  # Vi mode cursor colors
+  #
+  # Colors for the cursor when the vi mode is active.
+  #
+  # Allowed values are CellForeground and CellBackground, which reference the
+  # affected cell, or hexadecimal colors like #ff00ff.
+  #vi_mode_cursor:
+  #  text: CellBackground
+  #  cursor: CellForeground
+
+  # Selection colors
+  #
+  # Colors which should be used to draw the selection area.
+  #
+  # Allowed values are CellForeground and CellBackground, which reference the
+  # affected cell, or hexadecimal colors like #ff00ff.
+  #selection:
+  #  text: CellBackground
+  #  background: CellForeground
+
+  # Search colors
+  #
+  # Colors used for the search bar and match highlighting.
+  #search:
+    # Allowed values are CellForeground and CellBackground, which reference the
+    # affected cell, or hexadecimal colors like #ff00ff.
+    #matches:
+    #  foreground: '#000000'
+    #  background: '#ffffff'
+
+    #bar:
+    #  background: '#c5c8c6'
+    #  foreground: '#1d1f21'
 
   # Normal colors
   normal:
-    black:   '#282828'
-    red:     '#cc241d'
-    green:   '#98971a'
-    yellow:  '#d79921'
-    blue:    '#458588'
-    magenta: '#b16286'
-    cyan:    '#689d6a'
-    white:   '#a89984'
-
-  # Bright colors
-  bright:
-    black:   '#928374'
+    black:   '#1d2021'
     red:     '#fb4934'
     green:   '#b8bb26'
     yellow:  '#fabd2f'
     blue:    '#83a598'
     magenta: '#d3869b'
     cyan:    '#8ec07c'
-    white:   '#ebdbb2'
+    white:   '#d5c4a1'
+
+  # Bright colors
+  bright:
+    black:   '#665c54'
+    red:     '#fb4934'
+    green:   '#b8bb26'
+    yellow:  '#fabd2f'
+    blue:    '#83a598'
+    magenta: '#d3869b'
+    cyan:    '#8ec07c'
+    white:   '#fbf1c7'
+
+  # Dim colors
+  #
+  # If the dim colors are not set, they will be calculated automatically based
+  # on the `normal` colors.
+  #dim:
+  #  black:   '#131415'
+  #  red:     '#864343'
+  #  green:   '#777c44'
+  #  yellow:  '#9e824c'
+  #  blue:    '#556a7d'
+  #  magenta: '#75617b'
+  #  cyan:    '#5b7d78'
+  #  white:   '#828482'
+
+  # Indexed Colors
+  #
+  # The indexed colors include all colors from 16 to 256.
+  # When these are not set, they're filled with sensible defaults.
+  #
+  # Example:
+  #   `- { index: 16, color: '#ff00ff' }`
+  #
+  indexed_colors:
+    - { index: 16, color: '#fe8019' }
+    - { index: 17, color: '#d65d0e' }
+    - { index: 18, color: '#3c3836' }
+    - { index: 19, color: '#504945' }
+    - { index: 20, color: '#bdae93' }
+    - { index: 21, color: '#ebdbb2' }
+
+## Colors (Gruvbox dark)
+#colors:
+#  # Default colors
+#  primary:
+#    # hard contrast: background = '#1d2021'
+#    background: '#1d2021'
+#    # soft contrast: background = '#32302f'
+#    foreground: '#ebdbb2'
+#
+#  # Normal colors
+#  normal:
+#    black:   '#282828'
+#    red:     '#cc241d'
+#    green:   '#98971a'
+#    yellow:  '#d79921'
+#    blue:    '#458588'
+#    magenta: '#b16286'
+#    cyan:    '#689d6a'
+#    white:   '#a89984'
+#
+#  # Bright colors
+#  bright:
+#    black:   '#928374'
+#    red:     '#fb4934'
+#    green:   '#b8bb26'
+#    yellow:  '#fabd2f'
+#    blue:    '#83a598'
+#    magenta: '#d3869b'
+#    cyan:    '#8ec07c'
+#    white:   '#ebdbb2'
 
 # Colors (Tomorrow Night Bright)
 #colors:
