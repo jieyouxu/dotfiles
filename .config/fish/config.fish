@@ -11,6 +11,9 @@ abbr -a vimdiff 'nvim -d'
 abbr -a ct 'cargo t'
 abbr -a cls "clear && printf '\e[3J'"
 abbr -a cargo-annoy 'cargo clippy -- -D clippy::correctness -D clippy::complexity -D clippy::pedantic -D clippy::perf -D clippy::cargo'
+abbr -a fd 'fd --no-ignore'
+abbr -a rg 'rg --no-ignore'
+abbr -a rga 'rga --no-ignore'
 
 set -U fish_user_paths $HOME/.cargo/bin /usr/local/anaconda3/bin /usr/local/sbin /usr/local/bin /usr/bin /bin
 
