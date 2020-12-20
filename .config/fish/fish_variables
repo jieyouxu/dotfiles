@@ -1,6 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --path CPATH:/Library/Developer/CommandLineTools/SDKs/MacOSX10\x2e15\x2esdk/System/Library/Perl/5\x2e28/darwin\x2dthread\x2dmulti\x2d2level/CORE
+SETUVAR --export XDG_CONFIG_HOME:/Users/jieyouxu/\x2econfig
 SETUVAR __fish_classic_git_prompt_initialized:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_initialized:3100
@@ -17,7 +18,7 @@ SETUVAR _fish_abbr_gah:git\x20stash\x3b\x20and\x20git\x20pull\x20\x2d\x2drebase\
 SETUVAR _fish_abbr_gc:git\x20checkout
 SETUVAR _fish_abbr_gcc:gcc\x2d10
 SETUVAR _fish_abbr_gst:git\x20status
-SETUVAR _fish_abbr_l:exa
+SETUVAR _fish_abbr_l:exa\x20\x2dl
 SETUVAR _fish_abbr_ll:exa\x20\x2dl
 SETUVAR _fish_abbr_lll:exa\x20\x2dla
 SETUVAR _fish_abbr_ls:exa\x20\x2dal

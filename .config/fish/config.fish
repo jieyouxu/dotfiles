@@ -16,6 +16,7 @@ abbr -a rg 'rg --no-ignore'
 abbr -a rga 'rga --no-ignore'
 
 set -U fish_user_paths $HOME/.cargo/bin /usr/local/anaconda3/bin /usr/local/sbin /usr/local/bin /usr/bin /bin
+set -x XDG_CONFIG_HOME $HOME/.config
 
 # macOS uses Apple clang to pretent as GCC... let's "unpretend" it.
 if command -v gcc-10 > /dev/null
@@ -27,9 +28,9 @@ if status --is-interactive
 end
 
 if command -v exa > /dev/null
-	abbr -a l 'exa'
-	abbr -a ls 'exa -al'
+	abbr -a l 'exa -l'
 	abbr -a ll 'exa -l'
+	abbr -a ls 'exa -al'
 	abbr -a lll 'exa -la'
 else
 	abbr -a l 'ls'

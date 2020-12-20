@@ -11,6 +11,7 @@ automake
 bdw-gc
 berkeley-db
 boost-build
+c-ares
 cabal-install
 cairo
 cairomm
@@ -23,6 +24,7 @@ coreutils
 cpputest
 ctags
 dav1d
+djvulibre
 docbook
 docbook-xsl
 docutils
@@ -45,6 +47,7 @@ gd
 gdbm
 gdk-pixbuf
 gettext
+gh
 ghc
 ghostscript
 giflib
@@ -55,12 +58,14 @@ git-extras
 git-flow
 git-interactive-rebase-tool
 git-secret
+glfw
 glib
 glib-networking
 global
 gmime
 gmp
 gnu-getopt
+gnu-sed
 gnupg
 gnutls
 gobject-introspection
@@ -72,6 +77,7 @@ graphviz
 gsettings-desktop-schemas
 gsl
 gts
+guile
 harfbuzz
 htop
 httpie
@@ -86,7 +92,9 @@ ios-deploy
 ipcalc
 iproute2mac
 isl
+jansson
 jasper
+jemalloc
 jflex
 joe
 jpeg
@@ -97,6 +105,7 @@ libass
 libassuan
 libbluray
 libde265
+libev
 libevent
 libffi
 libgcrypt
@@ -115,6 +124,7 @@ libplist
 libpng
 libpq
 libpsl
+librsvg
 libsamplerate
 libsigc++
 libsigc++@2
@@ -162,6 +172,7 @@ neofetch
 neovim
 netpbm
 nettle
+nghttp2
 ninja
 nnn
 node
@@ -183,6 +194,7 @@ pass
 pastel
 pcre
 pcre2
+perl
 pgcli
 pinentry
 pinentry-mac
@@ -199,6 +211,7 @@ pstree
 putty
 python@2
 python@3.8
+python@3.9
 qemu
 qrencode
 qt
@@ -266,6 +279,7 @@ xz
 yarn
 ytop
 zlib
+zola
 zsh
 zsh-completions
 zsh-syntax-highlighting

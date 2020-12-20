@@ -28,8 +28,6 @@
 	required = true
 [core]
 	editor = nvim
-[sequence]
-	editor = interactive-rebase-tool
 [pull]
 	ff = only
 [init]

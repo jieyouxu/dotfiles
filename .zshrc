@@ -137,7 +137,7 @@ alias hlt="ack --passthru"
 alias rip="rip --graveyard ~/.local/share/Trash"
 
 # `sed` alternative with rust `sd`
-alias sed="sd"
+#alias sed="sd"
 
 # hex viewer with rust `hexyl`
 alias vhex="hexyl"
@@ -151,26 +151,26 @@ alias tasks"pueue"
 alias time="hyperfine"
 
 # `ls` alternative with rust `exa`
-alias ls="exa"
+#alias ls="exa"
 
 # `ls -al` alternative with rust `exa`
-alias l="exa --all --long"
-alias dir="exa --all --long"
+#alias l="exa --all --long"
+#alias dir="exa --all --long"
 
 # `tree` alternative with rust `exa`
-alias tree="exa --tree"
+#alias tree="exa --tree"
 
 # Network monitor with rust `bandwhich`
 alias network="bandwhich"
 
 # `cat` alternative with rust `bat`
-alias cat="bat"
+#alias cat="bat"
 
 # `diff` alternative with rust `diffr`
-alias diff="diffr"
+#alias diff="diffr"
 
 # `find` alternative with rust `fd`
-alias find="fd"
+#alias find="fd"
 
 # `top` alternative with rust `ytop`
 alias top="ytop"
@@ -182,7 +182,7 @@ alias date="gdate"
 alias serve="sfz"
 
 # tmux alias (attach session or create new session)
-alias t="tmux attach || tmux"
+#alias t="tmux attach || tmux"
 # tmux kill server
 alias tkill="tmux kill-server"
 
@@ -192,6 +192,9 @@ alias tkill="tmux kill-server"
 pyclean () {
     find . -regex '.*\(__pycache__\|\.py[co]\)' -delete
 }
+
+# Conda
+export PATH="export PATH="/usr/local/anaconda3/bin:$PATH""
 
 ### Default Shell ###
 export SHELL="/usr/local/bin/zsh"
