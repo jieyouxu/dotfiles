@@ -64,7 +64,6 @@ Plug 'segeljakt/vim-silicon'
 Plug 'chriskempson/base16-vim'
 "Plug 'srcery-colors/srcery-vim'
 "Plug 'NLKNguyen/papercolor-theme'
-"Plug 'andreasvc/vim-256noir'
 "Plug 'git@gitlab.com:yorickpeterse/happy_hacking.vim.git'
 
 call plug#end()
@@ -107,7 +106,8 @@ let base16colorspace=256
 set background=dark
 "colorscheme gruvbox
 "colorscheme base16-atelier-dune
-colorscheme base16-gruvbox-dark-hard
+"colorscheme base16-gruvbox-dark-hard
+colorscheme base16-tomorrow-night
 "colorscheme happy_hacking
 set cursorline
 highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#121212
