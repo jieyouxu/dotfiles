@@ -13,7 +13,7 @@ then
 fi
 
 brew list > $DEFAULT_LIST_FILENAME
-brew cask list > $CASK_LIST_FILENAME
+brew list --cask > $CASK_LIST_FILENAME
 
 echo -e "\x1B[36mbrew list: \x1B[0m";
 cat $DEFAULT_LIST_FILENAME;
