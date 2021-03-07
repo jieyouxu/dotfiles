@@ -27,8 +27,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'terryma/vim-expand-region'
 Plug 'airblade/vim-gitgutter'
 
-Plug 'hardcoreplayers/dashboard-nvim'
-
 " Detect indent
 Plug 'tpope/vim-sleuth'
 
@@ -56,12 +54,9 @@ Plug 'sheerun/vim-polyglot'
 " Formatting
 Plug 'godlygeek/tabular'
 
-" Silicon (code screenshot)
-Plug 'segeljakt/vim-silicon'
-
 " Colorscheme
-"Plug 'gruvbox-community/gruvbox'
-Plug 'chriskempson/base16-vim'
+Plug 'gruvbox-community/gruvbox'
+"Plug 'chriskempson/base16-vim'
 "Plug 'srcery-colors/srcery-vim'
 "Plug 'NLKNguyen/papercolor-theme'
 "Plug 'git@gitlab.com:yorickpeterse/happy_hacking.vim.git'
@@ -101,13 +96,14 @@ if exists('+termguicolors')
 endif
 
 " Colors
-let g:gruvbox_contrast_dark = "hard"
+let g:gruvbox_contrast_dark = "medium"
+let g:gruvbox_contrast_light = "medium"
 let base16colorspace=256
-set background=dark
-"colorscheme gruvbox
+set background=light
+colorscheme gruvbox
 "colorscheme base16-atelier-dune
 "colorscheme base16-gruvbox-dark-hard
-colorscheme base16-tomorrow-night
+"colorscheme base16-tomorrow-night
 "colorscheme happy_hacking
 set cursorline
 highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#121212
