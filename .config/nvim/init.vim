@@ -55,11 +55,11 @@ Plug 'sheerun/vim-polyglot'
 Plug 'godlygeek/tabular'
 
 " Colorscheme
-Plug 'gruvbox-community/gruvbox'
+"Plug 'gruvbox-community/gruvbox'
 "Plug 'chriskempson/base16-vim'
 "Plug 'srcery-colors/srcery-vim'
 "Plug 'NLKNguyen/papercolor-theme'
-"Plug 'git@gitlab.com:yorickpeterse/happy_hacking.vim.git'
+Plug 'git@gitlab.com:yorickpeterse/happy_hacking.vim.git'
 
 call plug#end()
 
@@ -99,12 +99,12 @@ endif
 let g:gruvbox_contrast_dark = "medium"
 let g:gruvbox_contrast_light = "medium"
 let base16colorspace=256
-set background=light
-colorscheme gruvbox
+set background=dark
+"colorscheme gruvbox
 "colorscheme base16-atelier-dune
 "colorscheme base16-gruvbox-dark-hard
 "colorscheme base16-tomorrow-night
-"colorscheme happy_hacking
+colorscheme happy_hacking
 set cursorline
 highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#121212
 autocmd InsertEnter * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1c1c1c
