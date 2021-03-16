@@ -130,6 +130,10 @@ alias cls="reset"
 alias zshconfig="open ~/.zshrc"
 alias ohmyzsh="open ~/.oh-my-zsh"
 
+# alias `gs` for `git status` so we don't run GhostScript every time I mean
+# `git status`
+alias gs="git status"
+
 # `ack` highlight alias
 alias hlt="ack --passthru"
 
